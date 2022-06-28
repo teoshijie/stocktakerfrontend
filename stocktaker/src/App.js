@@ -14,9 +14,9 @@ import UserContext from './Context/Usercontext';
 import Logout from './Components/logout'
 import Prompt from './Components/prompt'
 import SignInSuccessful from './Components/signinsuccessful';
-
-import './App.css';
+import BarcodeScanner from './barcode';
 import UpdatedSuccessfully from './Components/updatedsuccessfully';
+import './App.css';
 
 function App() {
 
@@ -50,10 +50,10 @@ return (
         <Route path="logout" element={<Logout />} />
         <Route path="prompt" element={<Prompt />} />
         <Route path="item/:id/edit" element={<Item />} />
+        <Route path="barcode" element={<BarcodeScanner />} />
         <Route path="signinsuccessful" element={<SignInSuccessful />} />
         <Route path="signupsuccessful" element={<SuccessfulSignup />} />
         <Route path="updatesuccessful" element={<UpdatedSuccessfully />} />
-
       </Routes>
       </UserContext.Provider>
     </React.Fragment>
